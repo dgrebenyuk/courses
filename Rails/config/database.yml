@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: courses
+  username: denis
+test:
+  adapter: postgresql
+  database: courses_test
+  username: denis
