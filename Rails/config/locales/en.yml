@@ -2,4 +2,15 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  actions:
+    header: "Actions"
+    delete: "Delete"
+    edit: "Edit"
+    new: "New"
+    save: "Save"
+    confirmation: "Are you sure?"
+  groups:
+    menu_title: "Manage Groups"
+    header: "Groups"
+    edit: "Edit Group"
+    new: "Create New Group"

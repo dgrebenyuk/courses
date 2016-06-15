@@ -1,0 +1,9 @@
+<table class='info_table'>
+  <tr>
+    <% Group.column_names.each do |col| %>
+      <th><%= col.titleize %></th>
+    <% end %>
+    <th><%= t('headers.actions') %></th>
+  </tr>
+  <%= render "groups", groups: @groups %>
+</table>
