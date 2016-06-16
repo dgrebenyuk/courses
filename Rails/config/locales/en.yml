@@ -14,3 +14,7 @@ en:
     header: "Groups"
     edit: "Edit Group"
     new: "Create New Group"
+  users:
+    title: "Users in Group #"
+    add: "Add User to Group"
+    select: "Select a User"

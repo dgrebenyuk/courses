@@ -1,0 +1,9 @@
+.group_user {
+  font-size: 18px;
+  list-style: circle;
+  cursor: crosshair;
+  &:hover {
+    font-size: 24px;
+    color: red;
+  }
+}
