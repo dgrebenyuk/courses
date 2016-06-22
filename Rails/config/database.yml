@@ -6,3 +6,7 @@ test:
   adapter: postgresql
   database: courses_test
   username: denis
+production:
+  adapter: postgresql
+  database: courses
+  username: denis
