@@ -1,7 +1,7 @@
 class Parent
-  protected
+  private
   def name
-    'Yomana'
+    'Hello'
   end
 end
 
@@ -17,3 +17,5 @@ class Child < Parent
     puts Parent.new.name rescue puts 'NoMethodError'
   end
 end
+c = Child.new
+c.get_parent_name

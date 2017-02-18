@@ -1,5 +1,15 @@
 class Training
   attr_accessor :data
+
+  # Same as attr_accessor
+  def data
+    @data
+  end
+
+  def data=(val)
+    @data = val
+  end
+
   def initialize
     @var = "Hello"
     local_var = "Something"
