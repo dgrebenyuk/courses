@@ -26,3 +26,13 @@ def execute_proc
   x = proc.call(1)
   x+=1
 end
+
+def multiple_procs(proc1, proc2)
+ proc1.call
+ proc2.call
+end
+
+a = Proc.new { puts "First proc" }
+b = Proc.new { puts "Second proc" }
+
+multiple_procs(a,b)
