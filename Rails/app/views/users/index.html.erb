@@ -1,7 +1,0 @@
-<h1><%= t('users.title') + @group.id.to_s %></h1>
-<%= link_to t('users.add'), new_group_user_path(@group) %>
-<ul>
-  <% @users.each do |user| %>
-    <li class="group_user"><%= user.name %></li>
-  <% end %>
-</ul>

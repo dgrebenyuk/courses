@@ -1,6 +1,0 @@
-<h1><%= t('users.add') %></h1>
-<%= form_tag group_users_path(@group) do %>
-  <%= label_tag t('users.select') %>
-  <%= select_tag "user", options_from_collection_for_select(@users, "id", "name")%>
-  <%= submit_tag %>
-<% end %>
