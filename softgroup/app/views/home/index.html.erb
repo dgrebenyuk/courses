@@ -1,0 +1,8 @@
+<h1>Hello World</h1>
+<h2>Users:</h2>
+<ul>
+  <% @users.each do |user| %>
+    <%= render 'user_row', user: user %>
+    <%= render partial: 'user_row', locals: { user: user } %>
+  <% end %>
+</ul>
