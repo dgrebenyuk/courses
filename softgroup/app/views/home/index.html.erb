@@ -1,6 +1,10 @@
 <h1>Hello World</h1>
-<h2>Users:</h2>
-<ul>
+<h2>
+  Users:
+  <small>
+    <a id='list_toggle' href='#'>Hide</a>
+  </small></h2>
+<ul class="user_list">
   <% @users.each do |user| %>
     <%= render 'user_row', user: user %>
     <%= render partial: 'user_row', locals: { user: user } %>
