@@ -2,16 +2,16 @@ class BooksController < ApplicationController
   before_filter :book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all
-  end
-
-  def new
     @book = Book.new
+    @books = Book.all
   end
 
   def create
     @book = Book.create(params[:book])
-    redirect_to action: :index
+    respond_to do |format|
+      format.js
+      format.html { redirect_to action: :index }
+    end
   end
 
   def update
@@ -21,7 +21,10 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    redirect_to action: :index
+    respond_to do |format|
+      format.js { render nothing: true }
+      format.html { redirect_to action: :index }
+    end
   end
 
   def search
