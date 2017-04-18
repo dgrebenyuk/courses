@@ -11,15 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170328151210) do
+ActiveRecord::Schema.define(:version => 20170418125843) do
+
+  create_table "book_pages", :force => true do |t|
+    t.text     "body"
+    t.integer  "book_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "books", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.integer  "page_count"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "year"
+    t.integer  "book_pages_count", :default => 0
   end
 
   create_table "comments", :force => true do |t|

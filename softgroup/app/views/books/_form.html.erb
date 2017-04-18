@@ -5,8 +5,12 @@
   <%= f.label :author %>
   <%= f.text_field :author %>
   <br><br>
-  <%= f.label :page_count %>
-  <%= f.text_field :page_count %>
+  <h4>Pages</h4>
+    <%= f.fields_for :book_pages do |ff| %>
+      <%= ff.label :body %>
+      <%= ff.text_area :body, rows: 5 %>
+    <% end %>
   <br><br>
+
   <%= f.submit %>
 <% end %>

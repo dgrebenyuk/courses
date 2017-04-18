@@ -3,6 +3,7 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.new
+    @book.book_pages.build
     @books = Book.all
   end
 

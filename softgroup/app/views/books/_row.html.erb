@@ -1,7 +1,7 @@
 <tr>
   <td><%= book.title %></td>
   <td><%= book.author %></td>
-  <td><%= book.page_count %></td>
+  <td><%= book.book_pages.size %></td>
   <td><%= link_to 'Edit', edit_book_path(book) %></td>
   <td><%= link_to 'Delete', book_path(book), class: 'destroy_book', method: 'DELETE', remote: true %></td>
 </tr>
