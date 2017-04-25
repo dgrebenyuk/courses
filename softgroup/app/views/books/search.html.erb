@@ -1,9 +1,2 @@
 <h1>Search Results</h1>
-<% if @books.empty? %>
-  No results
-<% else %>
-  <% @books.each do |book| %>
-    <%= book.title %>
-    <br>
-  <% end %>    
-<% end %>
+<%= search_results %>
