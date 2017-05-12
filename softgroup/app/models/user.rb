@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   before_destroy :die
   attr_accessible :name, :surname, :email, :active
 
-  default_scope -> { where(active: true) }
   scope :active, -> { where(active: true) }
   scope :with_email, -> { where('email IS NOT NULL') }
 
