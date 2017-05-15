@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.where('title LIKE ?', "%#{params[:query]}%")
+    @books = Book.search(params[:query])
   end
 
   private
