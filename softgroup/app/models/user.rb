@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   after_save :say_bye
   before_create :say_hi
   before_destroy :die
-  attr_accessible :name, :surname, :email, :active
+  # attr_accessible :name, :surname, :email, :active
 
   scope :active, -> { where(active: true) }
   scope :with_email, -> { where('email IS NOT NULL') }

@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>Softgroup</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track': 'reload' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= link_to 'Books', books_path %>
 <%= yield %>
 
 </body>

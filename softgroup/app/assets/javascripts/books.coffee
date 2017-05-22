@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on 'turbolinks:load', ->
   $('.new_book').hide()
   $('body').on 'click', '#add_book', ->
     $('.new_book').slideDown()

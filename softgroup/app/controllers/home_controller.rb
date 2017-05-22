@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def index
     flash[:notice] = "Lorem Ipsum"
     order = params[:order] || 'asc'
-    @users = User.order("id #{order}")
+    @users = User.all #order("id #{order}")
     if params[:redirect]
       redirect_to 'http://google.com' and return
     else

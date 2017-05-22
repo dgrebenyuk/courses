@@ -8,7 +8,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create(params[:book])
+    binding.pry
+    @book = Book.create(book_params)
     respond_to do |format|
       format.js
       format.html { redirect_to action: :index }
@@ -16,7 +17,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book.update_attributes(params[:book])
+    @book.update_attributes(book_params)
     redirect_to action: :index
   end
 
@@ -33,6 +34,11 @@ class BooksController < ApplicationController
   end
 
   private
+
+  def book_params
+    params.require(:book).permit(:id, :title, :author,
+      :page_count, book_pages_attributes: [:body])
+  end
 
   def book
     @book = Book.find(params[:id])
